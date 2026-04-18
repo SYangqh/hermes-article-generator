@@ -18,7 +18,7 @@ def create_run_dir(topic: str) -> Path:
 
 
 def run_article(topic: str, run_dir: Path):
-    print(f"\n🚀 生成文章: {topic}")
+    print(f"\n🚀 生成文章1: {topic}")
     result = subprocess.check_output(
         ["python", "main.py", topic],
         text=True

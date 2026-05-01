@@ -4,13 +4,13 @@ from pathlib import Path
 from datetime import datetime
 from langgraph.graph import StateGraph, END
 from langchain_openai import ChatOpenAI
-from hyperextract import Template
-
+from knowledge_graph import KnowledgeGraph, build_graph_from_outputs
+print(f"🧠 Starting Hermes at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 # ========= LLM =========
 llm = ChatOpenAI(
     model="qwen-plus",
     temperature=0.7,
-    openai_api_key=os.getenv("DASHSCOPE_API_KEY"),
+    openai_api_key="sk-d172b4def726420ea22cfb8aa58ca10a",
     openai_api_base="https://dashscope.aliyuncs.com/compatible-mode/v1",
 )
 
@@ -43,7 +43,7 @@ def decide_next_topic() -> str:
     graph_text = graph_file.read_text(encoding="utf-8")
 
     prompt = f"""
-你正在构建一个《Java 设计思想 → 前端认知映射》系列文章。
+你正在构建一个《前端工程师系统学 Java》系列文章。
 
 以下是已经写过的知识图谱：
 {graph_text[:6000]}
@@ -162,34 +162,44 @@ graph.add_edge("ops", END)
 app = graph.compile()
 
 
-# ========= Hyper-Extract =========
-def extract_knowledge(md_path: Path):
-    print("\n🧠 Hyper-Extract: 更新知识库中...\n")
+# ========= 知识图谱 =========
+KG_PATH = KB_DIR / "graph.json"
 
-    ka = Template.create("general/knowledge_graph")
-    text = md_path.read_text(encoding="utf-8")
-    result = ka.parse(text)
 
-    (KB_DIR / "graph.json").write_text(
-        ka.dump(result),
-        encoding="utf-8"
-    )
+def get_kg() -> KnowledgeGraph:
+    """获取知识图谱实例（供 Agent 节点调用）。"""
+    return KnowledgeGraph(KG_PATH, llm)
+
+
+def extract_knowledge(md_path: str | Path = None, force: bool = False):
+    """从指定文章（或全部文章）提取并更新知识图谱。"""
+    print("\n🧠 知识图谱：更新中...\n")
+    if md_path:
+        kg = get_kg()
+        kg.extract_and_merge(md_path, force=force)
+    else:
+        # 批量处理 outputs/ 下所有文章
+        build_graph_from_outputs(ROOT_OUTPUT, KG_PATH, llm, force=force)
 
 
 # ========= 运行 =========
 if __name__ == "__main__":
-    topic = sys.argv[1] if len(sys.argv) > 1 else decide_next_topic()
+    import argparse
+    parser = argparse.ArgumentParser(description="文章工作流")
+    parser.add_argument("--kg", action="store_true", help="仅更新知识图谱（不生成文章）")
+    parser.add_argument("--force", action="store_true", help="强制重新处理所有文章")
+    args = parser.parse_args()
 
-    run_dir = create_run_dir(topic)
-
-    print(f"\n🚀 Generating article: {topic}\n📁 输出目录: {run_dir}\n")
-
-    result = app.invoke({"topic": topic, "run_dir": run_dir})
-    article = result["final_output"]
-
-    final_path = run_dir / "final.md"
-    final_path.write_text(article, encoding="utf-8")
-
-    print(f"\n✅ 已保存: {final_path}")
-
-    extract_knowledge(final_path)
+    if args.kg:
+        # 仅更新 KG
+        extract_knowledge(force=args.force)
+    else:
+        # 走大纲驱动的 series_runner（推荐）
+        print("💡 提示：文章生成请使用 series_runner.py")
+        print("   python series_runner.py            # 生成下一篇")
+        print("   python series_runner.py --count 5  # 连续生成 5 篇")
+        print("   python series_runner.py --outline  # 查看/生成大纲")
+        print("   python series_runner.py --progress # 查看进度")
+        print()
+        # 也可以直接调 KG 更新
+        extract_knowledge(force=args.force)

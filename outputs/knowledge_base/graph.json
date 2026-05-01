@@ -1,0 +1,1551 @@
+{
+  "nodes": {
+    "强制花括号": {
+      "name": "强制花括号",
+      "type": "principle",
+      "description": "Java语言规范要求控制流必须使用{}显式声明执行范围",
+      "sources": [
+        "003_控制流"
+      ]
+    },
+    "词法分析器": {
+      "name": "词法分析器",
+      "type": "technology",
+      "description": "编译器组件，负责将字符流拆解为记号，仅识别符号忽略空格",
+      "sources": [
+        "003_控制流"
+      ]
+    },
+    "视觉欺骗": {
+      "name": "视觉欺骗",
+      "type": "concept",
+      "description": "代码缩进与逻辑执行范围不一致导致的认知错觉",
+      "sources": [
+        "003_控制流"
+      ]
+    },
+    "编译期强约束": {
+      "name": "编译期强约束",
+      "type": "principle",
+      "description": "在编译阶段通过硬性规则阻断潜在错误，换取执行确定性",
+      "sources": [
+        "003_控制流"
+      ]
+    },
+    "防御性设计": {
+      "name": "防御性设计",
+      "type": "pattern",
+      "description": "预设代码可能被误写或误改，通过机制限制防止逻辑逃逸",
+      "sources": [
+        "003_控制流"
+      ]
+    },
+    "作用域边界": {
+      "name": "作用域边界",
+      "type": "concept",
+      "description": "明确代码块的有效执行范围和变量可见性区域",
+      "sources": [
+        "003_控制流"
+      ]
+    },
+    "ESLint curly规则": {
+      "name": "ESLint curly规则",
+      "type": "tool",
+      "description": "前端静态扫描工具规则，强制要求if/else等语句包含花括号",
+      "sources": [
+        "003_控制流"
+      ]
+    },
+    "Vue template容器": {
+      "name": "Vue template容器",
+      "type": "technology",
+      "description": "Vue3中用于明确v-if/v-for指令作用范围的DOM容器",
+      "sources": [
+        "003_控制流"
+      ]
+    },
+    "约定优于配置": {
+      "name": "约定优于配置",
+      "type": "principle",
+      "description": "前端工程化哲学，通过默认约定保持开发敏捷而非强制硬编码",
+      "sources": [
+        "003_控制流"
+      ]
+    },
+    "静态扫描拦截": {
+      "name": "静态扫描拦截",
+      "type": "technology",
+      "description": "在构建或开发阶段通过工具自动检查代码规范并报错",
+      "sources": [
+        "003_控制流"
+      ]
+    },
+    "执行路径确定性": {
+      "name": "执行路径确定性",
+      "type": "concept",
+      "description": "代码逻辑流向在运行前已完全确定，无歧义或隐式行为",
+      "sources": [
+        "003_控制流"
+      ]
+    },
+    "IDE自动补全": {
+      "name": "IDE自动补全",
+      "type": "tool",
+      "description": "开发工具在保存时自动添加缺失的花括号，物理切断省略习惯",
+      "sources": [
+        "003_控制流"
+      ]
+    },
+    "C语言历史教训": {
+      "name": "C语言历史教训",
+      "type": "analogy",
+      "description": "Java设计者借鉴C语言因省略花括号导致bug的历史经验",
+      "sources": [
+        "003_控制流"
+      ]
+    },
+    "Git合并漂移": {
+      "name": "Git合并漂移",
+      "type": "concept",
+      "description": "多人协作时代码格式化差异导致合并后逻辑结构意外改变",
+      "sources": [
+        "003_控制流"
+      ]
+    },
+    "运行时动态查找": {
+      "name": "运行时动态查找",
+      "type": "concept",
+      "description": "JavaScript依赖作用域链和事件循环的动态执行特性",
+      "sources": [
+        "003_控制流"
+      ]
+    },
+    "企业级可维护性": {
+      "name": "企业级可维护性",
+      "type": "concept",
+      "description": "牺牲少量编写灵活性以换取长期团队协作的稳定性和安全性",
+      "sources": [
+        "003_控制流"
+      ]
+    },
+    "继承与多态": {
+      "name": "继承与多态",
+      "type": "concept",
+      "description": "Java核心机制，实现调用方与实现方解耦",
+      "sources": [
+        "005_继承与多态"
+      ]
+    },
+    "Liskov替换原则": {
+      "name": "Liskov替换原则",
+      "type": "principle",
+      "description": "子类可无缝替换父类且不破坏逻辑",
+      "sources": [
+        "005_继承与多态"
+      ]
+    },
+    "单继承接口多实现": {
+      "name": "单继承接口多实现",
+      "type": "pattern",
+      "description": "Java规避菱形继承陷阱的设计策略",
+      "sources": [
+        "005_继承与多态"
+      ]
+    },
+    "模板方法模式": {
+      "name": "模板方法模式",
+      "type": "pattern",
+      "description": "父类定义流程骨架，子类填充业务细节",
+      "sources": [
+        "005_继承与多态"
+      ]
+    },
+    "动态分派机制": {
+      "name": "动态分派机制",
+      "type": "technology",
+      "description": "JVM运行时根据实例类型路由方法调用",
+      "sources": [
+        "005_继承与多态"
+      ]
+    },
+    "虚方法表vtable": {
+      "name": "虚方法表vtable",
+      "type": "technology",
+      "description": "JVM用于快速定位重写方法的底层数据结构",
+      "sources": [
+        "005_继承与多态"
+      ]
+    },
+    "签名一致性校验": {
+      "name": "签名一致性校验",
+      "type": "principle",
+      "description": "确保重写方法签名与父类严格匹配",
+      "sources": [
+        "005_继承与多态"
+      ]
+    },
+    "脆弱基类风险": {
+      "name": "脆弱基类风险",
+      "type": "concept",
+      "description": "深层继承导致父类修改意外破坏子类行为",
+      "sources": [
+        "005_继承与多态"
+      ]
+    },
+    "组合优于继承": {
+      "name": "组合优于继承",
+      "type": "principle",
+      "description": "优先使用对象组合而非类继承来扩展功能",
+      "sources": [
+        "005_继承与多态"
+      ]
+    },
+    "TypeScript接口": {
+      "name": "TypeScript接口",
+      "type": "technology",
+      "description": "前端静态类型检查工具，定义数据契约",
+      "sources": [
+        "005_继承与多态"
+      ]
+    },
+    "React Context": {
+      "name": "React Context",
+      "type": "technology",
+      "description": "React中用于跨组件传递数据的机制",
+      "sources": [
+        "005_继承与多态"
+      ]
+    },
+    "面向契约编程": {
+      "name": "面向契约编程",
+      "type": "concept",
+      "description": "依赖抽象定义而非具体实现的架构思维",
+      "sources": [
+        "005_继承与多态"
+      ]
+    },
+    "编译期类型拦截": {
+      "name": "编译期类型拦截",
+      "type": "technology",
+      "description": "编译器在构建阶段阻止类型不匹配错误",
+      "sources": [
+        "005_继承与多态"
+      ]
+    },
+    "Spring AOP": {
+      "name": "Spring AOP",
+      "type": "tool",
+      "description": "基于动态代理实现无侵入式功能增强",
+      "sources": [
+        "005_继承与多态"
+      ]
+    },
+    "DI依赖注入": {
+      "name": "DI依赖注入",
+      "type": "pattern",
+      "description": "将对象创建与依赖关系管理交给容器",
+      "sources": [
+        "005_继承与多态"
+      ]
+    },
+    "抽象契约引用": {
+      "name": "抽象契约引用",
+      "type": "concept",
+      "description": "代码中声明父类或接口类型而非具体实现",
+      "sources": [
+        "005_继承与多态"
+      ]
+    },
+    "运行时实例化": {
+      "name": "运行时实例化",
+      "type": "technology",
+      "description": "程序执行期间动态创建具体子类对象",
+      "sources": [
+        "005_继承与多态"
+      ]
+    },
+    "SonarQube规范": {
+      "name": "SonarQube规范",
+      "type": "tool",
+      "description": "代码质量扫描工具，限制继承深度等指标",
+      "sources": [
+        "005_继承与多态"
+      ]
+    },
+    "PostConstruct初始化": {
+      "name": "PostConstruct初始化",
+      "type": "technology",
+      "description": "Bean注入完成后执行的安全初始化钩子",
+      "sources": [
+        "005_继承与多态"
+      ]
+    },
+    "前端组合式API": {
+      "name": "前端组合式API",
+      "type": "technology",
+      "description": "Vue3/React中规避状态污染的逻辑复用方式",
+      "sources": [
+        "005_继承与多态"
+      ]
+    },
+    "Java包机制": {
+      "name": "Java包机制",
+      "type": "concept",
+      "description": "通过逻辑命名空间对类进行分组管理的语法特性",
+      "sources": [
+        "007_包机制"
+      ]
+    },
+    "前端ES模块": {
+      "name": "前端ES模块",
+      "type": "concept",
+      "description": "现代JS/TS原生跨文件共享标准，提供明确边界",
+      "sources": [
+        "007_包机制"
+      ]
+    },
+    "package声明": {
+      "name": "package声明",
+      "type": "technology",
+      "description": "定义类的逻辑归属，编译器严格校验路径匹配",
+      "sources": [
+        "007_包机制"
+      ]
+    },
+    "import语句": {
+      "name": "import语句",
+      "type": "technology",
+      "description": "告诉编译器查找未写全限定名的类的位置",
+      "sources": [
+        "007_包机制"
+      ]
+    },
+    "包级私有权限": {
+      "name": "包级私有权限",
+      "type": "principle",
+      "description": "默认访问级别，仅同目录类可见，隔离内部实现",
+      "sources": [
+        "007_包机制"
+      ]
+    },
+    "类加载器": {
+      "name": "类加载器",
+      "type": "tool",
+      "description": "JVM组件，依赖文件系统寻址将字节码转为内存对象",
+      "sources": [
+        "007_包机制"
+      ]
+    },
+    "物理路径绑定": {
+      "name": "物理路径绑定",
+      "type": "principle",
+      "description": "Java包名必须与文件系统目录结构1:1映射的硬性要求",
+      "sources": [
+        "007_包机制"
+      ]
+    },
+    "别名映射": {
+      "name": "别名映射",
+      "type": "technology",
+      "description": "前端打包工具支持的路径别名，如@/，解耦物理位置",
+      "sources": [
+        "007_包机制"
+      ]
+    },
+    "构建确定性": {
+      "name": "构建确定性",
+      "type": "principle",
+      "description": "编译期拦截路径错误，杜绝运行时找不到类的风险",
+      "sources": [
+        "007_包机制"
+      ]
+    },
+    "模块边界隔离": {
+      "name": "模块边界隔离",
+      "type": "pattern",
+      "description": "利用包级私有防止架构腐化，强制走public接口",
+      "sources": [
+        "007_包机制"
+      ]
+    },
+    "全局命名空间": {
+      "name": "全局命名空间",
+      "type": "concept",
+      "description": "早期语言共享的全局空间，易导致命名冲突和维护成本高",
+      "sources": [
+        "007_包机制"
+      ]
+    },
+    "IDE重构移动": {
+      "name": "IDE重构移动",
+      "type": "tool",
+      "description": "自动同步更新包声明、import及构建配置的开发工具功能",
+      "sources": [
+        "007_包机制"
+      ]
+    },
+    "Vite/Webpack": {
+      "name": "Vite/Webpack",
+      "type": "tool",
+      "description": "前端打包工具，处理柔性路径解析和别名映射",
+      "sources": [
+        "007_包机制"
+      ]
+    },
+    "JVM执行引擎": {
+      "name": "JVM执行引擎",
+      "type": "tool",
+      "description": "执行字节码的底层引擎，依赖刚性绑定的类路径",
+      "sources": [
+        "007_包机制"
+      ]
+    },
+    "命名冲突治理": {
+      "name": "命名冲突治理",
+      "type": "concept",
+      "description": "通过包机制解决多团队并行开发时的类名重复问题",
+      "sources": [
+        "007_包机制"
+      ]
+    },
+    "全限定类名": {
+      "name": "全限定类名",
+      "type": "technology",
+      "description": "完整包路径加类名，用于JVM精准定位类资源",
+      "sources": [
+        "007_包机制"
+      ]
+    },
+    "目录契约": {
+      "name": "目录契约",
+      "type": "principle",
+      "description": "用强制的目录结构守住大型项目的命名边界",
+      "sources": [
+        "007_包机制"
+      ]
+    },
+    "架构腐化防护": {
+      "name": "架构腐化防护",
+      "type": "pattern",
+      "description": "通过访问控制限制跨包调用，保护内部实现细节",
+      "sources": [
+        "007_包机制"
+      ]
+    },
+    "零歧义协作": {
+      "name": "零歧义协作",
+      "type": "principle",
+      "description": "牺牲脚本式随意性，保证跨平台协作时的可预测性",
+      "sources": [
+        "007_包机制"
+      ]
+    },
+    "幽灵错误": {
+      "name": "幽灵错误",
+      "type": "concept",
+      "description": "手动移动文件后包声明不匹配导致的隐蔽编译或运行错误",
+      "sources": [
+        "007_包机制"
+      ]
+    },
+    "Java泛型": {
+      "name": "Java泛型",
+      "type": "concept",
+      "description": "编译期类型契约，运行时被彻底擦除",
+      "sources": [
+        "008_泛型基础"
+      ]
+    },
+    "类型擦除": {
+      "name": "类型擦除",
+      "type": "principle",
+      "description": "将泛型参数替换为上界，运行期仅保留裸类型",
+      "sources": [
+        "008_泛型基础"
+      ]
+    },
+    "二进制兼容": {
+      "name": "二进制兼容",
+      "type": "principle",
+      "description": "确保新老版本代码在JVM层面无缝交互",
+      "sources": [
+        "008_泛型基础"
+      ]
+    },
+    "编译期拦截": {
+      "name": "编译期拦截",
+      "type": "pattern",
+      "description": "编译器校验类型匹配并自动插入强转代码",
+      "sources": [
+        "008_泛型基础"
+      ]
+    },
+    "堆污染": {
+      "name": "堆污染",
+      "type": "concept",
+      "description": "因类型擦除导致异构数据混入集合引发的异常",
+      "sources": [
+        "008_泛型基础"
+      ]
+    },
+    "Class令牌": {
+      "name": "Class令牌",
+      "type": "tool",
+      "description": "运行时传递Class对象以绕过泛型擦除限制",
+      "sources": [
+        "008_泛型基础"
+      ]
+    },
+    "TypeScript泛型": {
+      "name": "TypeScript泛型",
+      "type": "concept",
+      "description": "前端构建期的类型契约，打包时抹去类型信息",
+      "sources": [
+        "008_泛型基础"
+      ]
+    },
+    "JVM规范": {
+      "name": "JVM规范",
+      "type": "technology",
+      "description": "强制规定.class文件中不存在泛型签名",
+      "sources": [
+        "008_泛型基础"
+      ]
+    },
+    "构建工具": {
+      "name": "构建工具",
+      "type": "technology",
+      "description": "如tsc/Vite，负责抹去TS类型生成纯JS",
+      "sources": [
+        "008_泛型基础"
+      ]
+    },
+    "动态反射": {
+      "name": "动态反射",
+      "type": "technology",
+      "description": "Java需显式传参，TS可配置保留部分运行时信息",
+      "sources": [
+        "008_泛型基础"
+      ]
+    },
+    "对象池复用": {
+      "name": "对象池复用",
+      "type": "pattern",
+      "description": "共享内存场景下易因擦除导致类型安全失效",
+      "sources": [
+        "008_泛型基础"
+      ]
+    },
+    "安全隔离带": {
+      "name": "安全隔离带",
+      "type": "pattern",
+      "description": "通过显式类型检查过滤脏数据保护集合",
+      "sources": [
+        "008_泛型基础"
+      ]
+    },
+    "上界约束": {
+      "name": "上界约束",
+      "type": "principle",
+      "description": "指定泛型参数的父类边界，擦除时替换为该边界",
+      "sources": [
+        "008_泛型基础"
+      ]
+    },
+    "零性能代价": {
+      "name": "零性能代价",
+      "type": "principle",
+      "description": "牺牲运行时类型表达以换取无额外内存开销",
+      "sources": [
+        "008_泛型基础"
+      ]
+    },
+    "SonarQube规则": {
+      "name": "SonarQube规则",
+      "type": "tool",
+      "description": "CI流水线中用于检测原始类型使用的静态分析工具",
+      "sources": [
+        "008_泛型基础"
+      ]
+    },
+    "RestController": {
+      "name": "RestController",
+      "type": "technology",
+      "description": "Spring组合注解，声明类为REST API控制器并自动处理JSON转换",
+      "sources": [
+        "009_RestController"
+      ]
+    },
+    "RequestBody": {
+      "name": "RequestBody",
+      "type": "technology",
+      "description": "注解，指示框架将HTTP请求体反序列化为Java对象参数",
+      "sources": [
+        "009_RestController"
+      ]
+    },
+    "HttpMessageConverter": {
+      "name": "HttpMessageConverter",
+      "type": "tool",
+      "description": "Spring组件，负责HTTP消息与Java对象间的双向序列化/反序列化",
+      "sources": [
+        "009_RestController"
+      ]
+    },
+    "声明即契约": {
+      "name": "声明即契约",
+      "type": "pattern",
+      "description": "通过代码签名和注解定义接口规范，框架自动履行底层协议细节",
+      "sources": [
+        "009_RestController"
+      ]
+    },
+    "强制边界兜底": {
+      "name": "强制边界兜底",
+      "type": "principle",
+      "description": "框架接管网络协议与数据格式，开发者仅关注业务逻辑边界",
+      "sources": [
+        "009_RestController"
+      ]
+    },
+    "Next.js路由": {
+      "name": "Next.js路由",
+      "type": "technology",
+      "description": "前端框架基于文件系统约定的API路由机制，自动处理JSON响应",
+      "sources": [
+        "009_RestController"
+      ]
+    },
+    "JVM多线程模型": {
+      "name": "JVM多线程模型",
+      "type": "concept",
+      "description": "Java运行时环境，通过独立线程池并发处理Web请求",
+      "sources": [
+        "009_RestController"
+      ]
+    },
+    "JS事件循环": {
+      "name": "JS事件循环",
+      "type": "concept",
+      "description": "Node.js单线程异步非阻塞模型，处理前端路由与I/O",
+      "sources": [
+        "009_RestController"
+      ]
+    },
+    "TCP Socket连接": {
+      "name": "TCP Socket连接",
+      "type": "concept",
+      "description": "操作系统层面的网络连接抽象，表现为文件描述符",
+      "sources": [
+        "009_RestController"
+      ]
+    },
+    "ControllerAdvice": {
+      "name": "ControllerAdvice",
+      "type": "technology",
+      "description": "Spring全局异常处理组件，统一拦截并标准化返回错误信息",
+      "sources": [
+        "009_RestController"
+      ]
+    },
+    "Valid校验注解": {
+      "name": "Valid校验注解",
+      "type": "technology",
+      "description": "Spring集成JSR校验规范，前置拦截非法入参防止脏数据流入",
+      "sources": [
+        "009_RestController"
+      ]
+    },
+    "文件描述符耗尽": {
+      "name": "文件描述符耗尽",
+      "type": "concept",
+      "description": "系统级资源限制，因TCP连接未正确释放导致无法新建连接",
+      "sources": [
+        "009_RestController"
+      ]
+    },
+    "CloseWait状态": {
+      "name": "CloseWait状态",
+      "type": "concept",
+      "description": "TCP连接状态，表示客户端已断开但服务端未关闭Socket",
+      "sources": [
+        "009_RestController"
+      ]
+    },
+    "手动字节流操作": {
+      "name": "手动字节流操作",
+      "type": "pattern",
+      "description": "传统Web开发中手动读取InputStream并解析JSON的样板代码",
+      "sources": [
+        "009_RestController"
+      ]
+    },
+    "路由映射表": {
+      "name": "路由映射表",
+      "type": "concept",
+      "description": "Spring启动期扫描注解生成的URL路径到控制器方法的映射关系",
+      "sources": [
+        "009_RestController"
+      ]
+    },
+    "Content-Type头": {
+      "name": "Content-Type头",
+      "type": "concept",
+      "description": "HTTP请求头，指定媒体类型以触发正确的消息转换器",
+      "sources": [
+        "009_RestController"
+      ]
+    },
+    "DTO对象": {
+      "name": "DTO对象",
+      "type": "concept",
+      "description": "数据传输对象，作为API接口的输入输出强类型载体",
+      "sources": [
+        "009_RestController"
+      ]
+    },
+    "Nginx长连接复用": {
+      "name": "Nginx长连接复用",
+      "type": "tool",
+      "description": "网关层优化手段，减少TCP握手开销并管理连接生命周期",
+      "sources": [
+        "009_RestController"
+      ]
+    },
+    "415错误码": {
+      "name": "415错误码",
+      "type": "concept",
+      "description": "HTTP状态码，表示服务器拒绝服务因不支持的请求媒体类型",
+      "sources": [
+        "009_RestController"
+      ]
+    },
+    "IDE Endpoints面板": {
+      "name": "IDE Endpoints面板",
+      "type": "tool",
+      "description": "开发工具功能，实时展示Spring Boot应用的路由映射状态",
+      "sources": [
+        "009_RestController"
+      ]
+    }
+  },
+  "edges": [
+    {
+      "source": "强制花括号",
+      "target": "词法分析器",
+      "relation": "依赖",
+      "description": "强制花括号机制依赖词法分析器对符号的严格识别",
+      "source_article": "003_控制流"
+    },
+    {
+      "source": "词法分析器",
+      "target": "视觉欺骗",
+      "relation": "触发",
+      "description": "词法分析器忽略缩进，从而暴露并防止视觉欺骗带来的逻辑错误",
+      "source_article": "003_控制流"
+    },
+    {
+      "source": "强制花括号",
+      "target": "编译期强约束",
+      "relation": "实现",
+      "description": "强制花括号是编译期强约束原则的具体实现手段",
+      "source_article": "003_控制流"
+    },
+    {
+      "source": "编译期强约束",
+      "target": "执行路径确定性",
+      "relation": "触发",
+      "description": "编译期的严格检查确保了代码执行路径的100%确定性",
+      "source_article": "003_控制流"
+    },
+    {
+      "source": "强制花括号",
+      "target": "防御性设计",
+      "relation": "体现",
+      "description": "强制花括号体现了防止人为失误的防御性设计模式",
+      "source_article": "003_控制流"
+    },
+    {
+      "source": "防御性设计",
+      "target": "企业级可维护性",
+      "relation": "扩展",
+      "description": "防御性设计旨在提升大型团队项目中的代码可维护性",
+      "source_article": "003_控制流"
+    },
+    {
+      "source": "强制花括号",
+      "target": "作用域边界",
+      "relation": "对应",
+      "description": "花括号在语法上直接定义了代码的作用域边界",
+      "source_article": "003_控制流"
+    },
+    {
+      "source": "ESLint curly规则",
+      "target": "强制花括号",
+      "relation": "类比",
+      "description": "前端的ESLint规则类比Java的强制花括号，均旨在规范代码块",
+      "source_article": "003_控制流"
+    },
+    {
+      "source": "Vue template容器",
+      "target": "作用域边界",
+      "relation": "实现",
+      "description": "Vue的template标签用于实现模板指令的作用域边界",
+      "source_article": "003_控制流"
+    },
+    {
+      "source": "ESLint curly规则",
+      "target": "静态扫描拦截",
+      "relation": "依赖",
+      "description": "ESLint规则依赖静态扫描技术在构建或编辑时拦截违规代码",
+      "source_article": "003_控制流"
+    },
+    {
+      "source": "Vue template容器",
+      "target": "约定优于配置",
+      "relation": "体现",
+      "description": "Vue的容器用法体现了前端框架约定优于配置的哲学",
+      "source_article": "003_控制流"
+    },
+    {
+      "source": "编译期强约束",
+      "target": "约定优于配置",
+      "relation": "类比",
+      "description": "Java的硬编码约束与前端约定形成对比，但目标一致",
+      "source_article": "003_控制流"
+    },
+    {
+      "source": "视觉欺骗",
+      "target": "Git合并漂移",
+      "relation": "触发",
+      "description": "依赖视觉缩进容易在Git合并时因格式变化引发逻辑漂移",
+      "source_article": "003_控制流"
+    },
+    {
+      "source": "IDE自动补全",
+      "target": "强制花括号",
+      "relation": "扩展",
+      "description": "IDE工具通过自动补全扩展了强制花括号规范的落地能力",
+      "source_article": "003_控制流"
+    },
+    {
+      "source": "C语言历史教训",
+      "target": "强制花括号",
+      "relation": "触发",
+      "description": "C语言的痛点触发了Java设计中强制花括号的决策",
+      "source_article": "003_控制流"
+    },
+    {
+      "source": "执行路径确定性",
+      "target": "运行时动态查找",
+      "relation": "类比",
+      "description": "Java的静态确定性与JS的动态查找形成底层机制对比",
+      "source_article": "003_控制流"
+    },
+    {
+      "source": "静态扫描拦截",
+      "target": "企业级可维护性",
+      "relation": "扩展",
+      "description": "工具链的静态拦截能力扩展了团队代码质量的维护边界",
+      "source_article": "003_控制流"
+    },
+    {
+      "source": "强制花括号",
+      "target": "IDE自动补全",
+      "relation": "依赖",
+      "description": "规范的有效落地往往依赖IDE工具的自动化支持",
+      "source_article": "003_控制流"
+    },
+    {
+      "source": "Vue template容器",
+      "target": "ESLint curly规则",
+      "relation": "类比",
+      "description": "Vue的显式容器与React/JS的ESLint规则均为前端边界控制手段",
+      "source_article": "003_控制流"
+    },
+    {
+      "source": "词法分析器",
+      "target": "编译期强约束",
+      "relation": "实现",
+      "description": "词法分析器的行为实现了编译期对语法的强约束",
+      "source_article": "003_控制流"
+    },
+    {
+      "source": "继承与多态",
+      "target": "Liskov替换原则",
+      "relation": "实现",
+      "description": "多态机制是Liskov替换原则在Java中的具体落地",
+      "source_article": "005_继承与多态"
+    },
+    {
+      "source": "继承与多态",
+      "target": "动态分派机制",
+      "relation": "依赖",
+      "description": "多态的运行依赖于JVM的动态分派能力",
+      "source_article": "005_继承与多态"
+    },
+    {
+      "source": "动态分派机制",
+      "target": "虚方法表vtable",
+      "relation": "依赖",
+      "description": "动态分派通过查询虚方法表索引定位实际方法",
+      "source_article": "005_继承与多态"
+    },
+    {
+      "source": "虚方法表vtable",
+      "target": "签名一致性校验",
+      "relation": "依赖",
+      "description": "vtable索引正确性依赖于方法签名的严格一致",
+      "source_article": "005_继承与多态"
+    },
+    {
+      "source": "单继承接口多实现",
+      "target": "继承与多态",
+      "relation": "扩展",
+      "description": "该策略是对Java继承多态机制的优化补充",
+      "source_article": "005_继承与多态"
+    },
+    {
+      "source": "模板方法模式",
+      "target": "继承与多态",
+      "relation": "包含",
+      "description": "模板方法利用继承结构固定流程并开放扩展点",
+      "source_article": "005_继承与多态"
+    },
+    {
+      "source": "模板方法模式",
+      "target": "动态分派机制",
+      "relation": "触发",
+      "description": "模板中的抽象方法调用触发运行时的动态分派",
+      "source_article": "005_继承与多态"
+    },
+    {
+      "source": "脆弱基类风险",
+      "target": "组合优于继承",
+      "relation": "触发",
+      "description": "脆弱基类问题促使开发者转向组合模式",
+      "source_article": "005_继承与多态"
+    },
+    {
+      "source": "面向契约编程",
+      "target": "抽象契约引用",
+      "relation": "包含",
+      "description": "面向契约编程的核心是代码依赖抽象引用",
+      "source_article": "005_继承与多态"
+    },
+    {
+      "source": "TypeScript接口",
+      "target": "面向契约编程",
+      "relation": "实现",
+      "description": "TS接口在前端实现了面向契约的编程思想",
+      "source_article": "005_继承与多态"
+    },
+    {
+      "source": "React Context",
+      "target": "面向契约编程",
+      "relation": "实现",
+      "description": "Context机制在前端实现了依赖抽象的数据透传",
+      "source_article": "005_继承与多态"
+    },
+    {
+      "source": "编译期类型拦截",
+      "target": "签名一致性校验",
+      "relation": "实现",
+      "description": "编译器通过类型拦截保障方法签名的一致性",
+      "source_article": "005_继承与多态"
+    },
+    {
+      "source": "Spring AOP",
+      "target": "动态分派机制",
+      "relation": "依赖",
+      "description": "AOP代理机制底层依赖JVM的动态分派特性",
+      "source_article": "005_继承与多态"
+    },
+    {
+      "source": "DI依赖注入",
+      "target": "抽象契约引用",
+      "relation": "依赖",
+      "description": "依赖注入要求注入点声明为抽象类型以解耦",
+      "source_article": "005_继承与多态"
+    },
+    {
+      "source": "前端组合式API",
+      "target": "组合优于继承",
+      "relation": "类比",
+      "description": "前端组合API体现了组合优于继承的设计哲学",
+      "source_article": "005_继承与多态"
+    },
+    {
+      "source": "继承与多态",
+      "target": "前端组合式API",
+      "relation": "类比",
+      "description": "Java多态解耦与前端组合API解耦目标一致",
+      "source_article": "005_继承与多态"
+    },
+    {
+      "source": "TypeScript接口",
+      "target": "编译期类型拦截",
+      "relation": "触发",
+      "description": "TS接口定义触发编译器的类型安全检查",
+      "source_article": "005_继承与多态"
+    },
+    {
+      "source": "SonarQube规范",
+      "target": "脆弱基类风险",
+      "relation": "抑制",
+      "description": "通过限制继承深度来抑制脆弱基类风险",
+      "source_article": "005_继承与多态"
+    },
+    {
+      "source": "PostConstruct初始化",
+      "target": "脆弱基类风险",
+      "relation": "抑制",
+      "description": "延迟初始化避免构造器中多态调用导致的空指针",
+      "source_article": "005_继承与多态"
+    },
+    {
+      "source": "抽象契约引用",
+      "target": "运行时实例化",
+      "relation": "对应",
+      "description": "编译期抽象引用对应运行期的具体实例化",
+      "source_article": "005_继承与多态"
+    },
+    {
+      "source": "Liskov替换原则",
+      "target": "签名一致性校验",
+      "relation": "依赖",
+      "description": "满足LSP的前提是子类方法签名与父类兼容",
+      "source_article": "005_继承与多态"
+    },
+    {
+      "source": "单继承接口多实现",
+      "target": "脆弱基类风险",
+      "relation": "抑制",
+      "description": "接口隔离减少了单继承链过长带来的风险",
+      "source_article": "005_继承与多态"
+    },
+    {
+      "source": "DI依赖注入",
+      "target": "React Context",
+      "relation": "类比",
+      "description": "后端DI与前端的Context都解决依赖透传问题",
+      "source_article": "005_继承与多态"
+    },
+    {
+      "source": "Spring AOP",
+      "target": "模板方法模式",
+      "relation": "类比",
+      "description": "AOP切面与模板方法都实现了非侵入式逻辑增强",
+      "source_article": "005_继承与多态"
+    },
+    {
+      "source": "面向契约编程",
+      "target": "组合优于继承",
+      "relation": "扩展",
+      "description": "面向契约思维自然导向更灵活的组合设计",
+      "source_article": "005_继承与多态"
+    },
+    {
+      "source": "Java包机制",
+      "target": "package声明",
+      "relation": "包含",
+      "description": "包机制的核心组成部分之一是package声明",
+      "source_article": "007_包机制"
+    },
+    {
+      "source": "Java包机制",
+      "target": "import语句",
+      "relation": "包含",
+      "description": "包机制依赖import语句进行类查找",
+      "source_article": "007_包机制"
+    },
+    {
+      "source": "Java包机制",
+      "target": "包级私有权限",
+      "relation": "包含",
+      "description": "包机制提供了包级私有这一默认访问控制",
+      "source_article": "007_包机制"
+    },
+    {
+      "source": "Java包机制",
+      "target": "物理路径绑定",
+      "relation": "依赖",
+      "description": "Java包机制强依赖于包名与物理目录的1:1映射",
+      "source_article": "007_包机制"
+    },
+    {
+      "source": "物理路径绑定",
+      "target": "类加载器",
+      "relation": "依赖",
+      "description": "类加载器直接依赖文件系统路径来定位类",
+      "source_article": "007_包机制"
+    },
+    {
+      "source": "类加载器",
+      "target": "JVM执行引擎",
+      "relation": "属于",
+      "description": "类加载器是JVM执行引擎的一部分",
+      "source_article": "007_包机制"
+    },
+    {
+      "source": "Java包机制",
+      "target": "命名冲突治理",
+      "relation": "实现",
+      "description": "包机制的主要目的是解决企业级开发中的命名冲突",
+      "source_article": "007_包机制"
+    },
+    {
+      "source": "Java包机制",
+      "target": "前端ES模块",
+      "relation": "类比",
+      "description": "两者动机一致，都用明确边界替代全局污染",
+      "source_article": "007_包机制"
+    },
+    {
+      "source": "前端ES模块",
+      "target": "别名映射",
+      "relation": "支持",
+      "description": "前端模块系统支持通过别名映射解耦物理路径",
+      "source_article": "007_包机制"
+    },
+    {
+      "source": "Java包机制",
+      "target": "别名映射",
+      "relation": "排斥",
+      "description": "Java不支持类似前端的别名映射，必须使用真实路径",
+      "source_article": "007_包机制"
+    },
+    {
+      "source": "别名映射",
+      "target": "Vite/Webpack",
+      "relation": "依赖",
+      "description": "前端别名映射由Vite或Webpack等打包工具处理",
+      "source_article": "007_包机制"
+    },
+    {
+      "source": "包级私有权限",
+      "target": "模块边界隔离",
+      "relation": "触发",
+      "description": "包级私有权限天然形成了模块间的边界隔离",
+      "source_article": "007_包机制"
+    },
+    {
+      "source": "模块边界隔离",
+      "target": "架构腐化防护",
+      "relation": "实现",
+      "description": "通过边界隔离防止内部实现被外部随意调用从而防护架构腐化",
+      "source_article": "007_包机制"
+    },
+    {
+      "source": "Java包机制",
+      "target": "构建确定性",
+      "relation": "提供",
+      "description": "包机制通过编译期校验提供了构建的确定性",
+      "source_article": "007_包机制"
+    },
+    {
+      "source": "构建确定性",
+      "target": "零歧义协作",
+      "relation": "促进",
+      "description": "构建确定性促进了跨团队跨平台的零歧义协作",
+      "source_article": "007_包机制"
+    },
+    {
+      "source": "物理路径绑定",
+      "target": "幽灵错误",
+      "relation": "触发",
+      "description": "违反物理路径绑定（如手动移动文件）会触发幽灵错误",
+      "source_article": "007_包机制"
+    },
+    {
+      "source": "幽灵错误",
+      "target": "IDE重构移动",
+      "relation": "解决",
+      "description": "使用IDE的重构移动功能可以自动修复包声明避免幽灵错误",
+      "source_article": "007_包机制"
+    },
+    {
+      "source": "package声明",
+      "target": "全限定类名",
+      "relation": "构成",
+      "description": "package声明与类名共同构成了全限定类名",
+      "source_article": "007_包机制"
+    },
+    {
+      "source": "全限定类名",
+      "target": "类加载器",
+      "relation": "依赖",
+      "description": "类加载器依据全限定类名在ClassPath中查找类",
+      "source_article": "007_包机制"
+    },
+    {
+      "source": "Java包机制",
+      "target": "全局命名空间",
+      "relation": "取代",
+      "description": "Java包机制取代了早期语言的全局命名空间以降低成本",
+      "source_article": "007_包机制"
+    },
+    {
+      "source": "前端ES模块",
+      "target": "Java包机制",
+      "relation": "对比",
+      "description": "前端ES模块与Java包机制在隔离粒度和解析方式上形成对比",
+      "source_article": "007_包机制"
+    },
+    {
+      "source": "包级私有权限",
+      "target": "Java包机制",
+      "relation": "扩展",
+      "description": "包级私有是Java包机制相对于文件级隔离的扩展特性",
+      "source_article": "007_包机制"
+    },
+    {
+      "source": "Vite/Webpack",
+      "target": "前端ES模块",
+      "relation": "处理",
+      "description": "打包工具处理前端ES模块的依赖和路径解析",
+      "source_article": "007_包机制"
+    },
+    {
+      "source": "目录契约",
+      "target": "Java包机制",
+      "relation": "对应",
+      "description": "目录契约是Java包机制在文件系统层面的具体体现",
+      "source_article": "007_包机制"
+    },
+    {
+      "source": "Java包机制",
+      "target": "目录契约",
+      "relation": "强制",
+      "description": "Java包机制强制要求遵守目录契约",
+      "source_article": "007_包机制"
+    },
+    {
+      "source": "Java泛型",
+      "target": "类型擦除",
+      "relation": "依赖",
+      "description": "Java泛型的实现依赖于编译后的类型擦除机制",
+      "source_article": "008_泛型基础"
+    },
+    {
+      "source": "类型擦除",
+      "target": "二进制兼容",
+      "relation": "实现",
+      "description": "类型擦除是为了在不改动JVM底层前提下实现二进制兼容",
+      "source_article": "008_泛型基础"
+    },
+    {
+      "source": "Java泛型",
+      "target": "编译期拦截",
+      "relation": "包含",
+      "description": "Java泛型在编译阶段包含类型检查和自动强转逻辑",
+      "source_article": "008_泛型基础"
+    },
+    {
+      "source": "编译期拦截",
+      "target": "零性能代价",
+      "relation": "触发",
+      "description": "编译期处理类型安全从而达成运行时的零性能代价",
+      "source_article": "008_泛型基础"
+    },
+    {
+      "source": "类型擦除",
+      "target": "堆污染",
+      "relation": "触发",
+      "description": "运行时缺乏类型信息导致异构数据混入引发堆污染",
+      "source_article": "008_泛型基础"
+    },
+    {
+      "source": "堆污染",
+      "target": "安全隔离带",
+      "relation": "依赖",
+      "description": "解决堆污染问题需要建立基于Class检查的安全隔离带",
+      "source_article": "008_泛型基础"
+    },
+    {
+      "source": "安全隔离带",
+      "target": "Class令牌",
+      "relation": "使用",
+      "description": "安全隔离模式利用Class令牌在运行时进行精确类型校验",
+      "source_article": "008_泛型基础"
+    },
+    {
+      "source": "Java泛型",
+      "target": "TypeScript泛型",
+      "relation": "类比",
+      "description": "两者均为编译/构建期的类型契约，运行时均不可见",
+      "source_article": "008_泛型基础"
+    },
+    {
+      "source": "Java泛型",
+      "target": "JVM规范",
+      "relation": "依赖",
+      "description": "Java泛型的行为受限于JVM规范对字节码结构的定义",
+      "source_article": "008_泛型基础"
+    },
+    {
+      "source": "TypeScript泛型",
+      "target": "构建工具",
+      "relation": "依赖",
+      "description": "TS泛型的擦除由tsc或Vite等构建工具执行",
+      "source_article": "008_泛型基础"
+    },
+    {
+      "source": "JVM规范",
+      "target": "动态反射",
+      "relation": "限制",
+      "description": "JVM规范导致Java无法像TS那样直接通过反射获取泛型类型",
+      "source_article": "008_泛型基础"
+    },
+    {
+      "source": "构建工具",
+      "target": "动态反射",
+      "relation": "扩展",
+      "description": "前端构建工具可配置保留部分类型信息支持动态推导",
+      "source_article": "008_泛型基础"
+    },
+    {
+      "source": "对象池复用",
+      "target": "堆污染",
+      "relation": "触发",
+      "description": "在对象池等共享内存场景中，类型擦除极易触发堆污染",
+      "source_article": "008_泛型基础"
+    },
+    {
+      "source": "Java泛型",
+      "target": "上界约束",
+      "relation": "包含",
+      "description": "Java泛型支持通过extends关键字定义上界约束",
+      "source_article": "008_泛型基础"
+    },
+    {
+      "source": "上界约束",
+      "target": "类型擦除",
+      "relation": "影响",
+      "description": "存在上界约束时，类型擦除将泛型替换为指定的上界而非Object",
+      "source_article": "008_泛型基础"
+    },
+    {
+      "source": "Class令牌",
+      "target": "动态反射",
+      "relation": "实现",
+      "description": "传入Class令牌是利用反射机制绕过泛型擦除的标准实现",
+      "source_article": "008_泛型基础"
+    },
+    {
+      "source": "SonarQube规则",
+      "target": "堆污染",
+      "relation": "预防",
+      "description": "通过静态分析规则在编码阶段预防可能导致堆污染的裸类型使用",
+      "source_article": "008_泛型基础"
+    },
+    {
+      "source": "TypeScript泛型",
+      "target": "Java泛型",
+      "relation": "类比",
+      "description": "TS泛型是前端视角下理解Java泛型擦除机制的最佳类比对象",
+      "source_article": "008_泛型基础"
+    },
+    {
+      "source": "二进制兼容",
+      "target": "零性能代价",
+      "relation": "对应",
+      "description": "保持二进制兼容性的同时也就实现了运行时的零额外性能开销",
+      "source_article": "008_泛型基础"
+    },
+    {
+      "source": "编译期拦截",
+      "target": "ClassCastException",
+      "relation": "预防",
+      "description": "编译期拦截旨在预防运行期因错误强转导致的ClassCastException",
+      "source_article": "008_泛型基础"
+    },
+    {
+      "source": "RestController",
+      "target": "声明即契约",
+      "relation": "实现",
+      "description": "RestController通过注解元数据实现了声明即契约的开发模式",
+      "source_article": "009_RestController"
+    },
+    {
+      "source": "RequestBody",
+      "target": "HttpMessageConverter",
+      "relation": "依赖",
+      "description": "RequestBody注解依赖HttpMessageConverter执行具体的反序列化逻辑",
+      "source_article": "009_RestController"
+    },
+    {
+      "source": "RestController",
+      "target": "强制边界兜底",
+      "relation": "体现",
+      "description": "RestController的设计哲学体现了框架替开发者兜底底层细节的原则",
+      "source_article": "009_RestController"
+    },
+    {
+      "source": "手动字节流操作",
+      "target": "RestController",
+      "relation": "类比",
+      "description": "RestController自动化流程替代了传统手动读写字节流的繁琐操作",
+      "source_article": "009_RestController"
+    },
+    {
+      "source": "Next.js路由",
+      "target": "RestController",
+      "relation": "类比",
+      "description": "Next.js的文件路由与Spring的注解路由在心智模型上高度相似",
+      "source_article": "009_RestController"
+    },
+    {
+      "source": "Next.js路由",
+      "target": "声明即契约",
+      "relation": "实现",
+      "description": "Next.js通过返回对象自动序列化也实现了声明即契约的理念",
+      "source_article": "009_RestController"
+    },
+    {
+      "source": "JVM多线程模型",
+      "target": "JS事件循环",
+      "relation": "类比",
+      "description": "两者分别是Java后端和Nodejs前端处理并发请求的核心运行时机制",
+      "source_article": "009_RestController"
+    },
+    {
+      "source": "RestController",
+      "target": "JVM多线程模型",
+      "relation": "运行于",
+      "description": "Spring控制器的路由分发与对象转换发生在JVM多线程环境中",
+      "source_article": "009_RestController"
+    },
+    {
+      "source": "Next.js路由",
+      "target": "JS事件循环",
+      "relation": "运行于",
+      "description": "Node.js环境下的前端路由解析依赖于JavaScript单线程事件循环",
+      "source_article": "009_RestController"
+    },
+    {
+      "source": "TCP Socket连接",
+      "target": "文件描述符耗尽",
+      "relation": "触发",
+      "description": "大量未释放的TCP Socket连接会导致操作系统文件描述符耗尽",
+      "source_article": "009_RestController"
+    },
+    {
+      "source": "CloseWait状态",
+      "target": "TCP Socket连接",
+      "relation": "包含",
+      "description": "CloseWait是TCP连接生命周期中的一种特定异常状态",
+      "source_article": "009_RestController"
+    },
+    {
+      "source": "ControllerAdvice",
+      "target": "强制边界兜底",
+      "relation": "扩展",
+      "description": "ControllerAdvice将异常处理的边界兜底能力扩展到全局范围",
+      "source_article": "009_RestController"
+    },
+    {
+      "source": "Valid校验注解",
+      "target": "DTO对象",
+      "relation": "约束",
+      "description": "Valid注解对DTO对象的字段进行前置合法性约束",
+      "source_article": "009_RestController"
+    },
+    {
+      "source": "Content-Type头",
+      "target": "HttpMessageConverter",
+      "relation": "触发",
+      "description": "正确的Content-Type头是触发HttpMessageConverter匹配的关键条件",
+      "source_article": "009_RestController"
+    },
+    {
+      "source": "Content-Type头",
+      "target": "415错误码",
+      "relation": "缺失导致",
+      "description": "缺少或错误的Content-Type头会导致服务器返回415不支持媒体类型错误",
+      "source_article": "009_RestController"
+    },
+    {
+      "source": "路由映射表",
+      "target": "RestController",
+      "relation": "生成自",
+      "description": "Spring在启动期扫描RestController注解生成内部的路由映射表",
+      "source_article": "009_RestController"
+    },
+    {
+      "source": "Nginx长连接复用",
+      "target": "TCP Socket连接",
+      "relation": "优化",
+      "description": "Nginx长连接复用机制优化了底层TCP Socket连接的创建与销毁开销",
+      "source_article": "009_RestController"
+    },
+    {
+      "source": "IDE Endpoints面板",
+      "target": "路由映射表",
+      "relation": "可视化",
+      "description": "IDE插件将内存中的路由映射表可视化以便开发者调试",
+      "source_article": "009_RestController"
+    },
+    {
+      "source": "DTO对象",
+      "target": "手动字节流操作",
+      "relation": "替代",
+      "description": "强类型的DTO对象交互替代了脆弱的字符串/字节流手动拼接",
+      "source_article": "009_RestController"
+    },
+    {
+      "source": "JVM多线程模型",
+      "target": "TCP Socket连接",
+      "relation": "管理",
+      "description": "JVM Web容器线程池负责管理与TCP Socket连接对应的I/O操作",
+      "source_article": "009_RestController"
+    }
+  ],
+  "articles": [
+    {
+      "id": "003_控制流",
+      "path": "outputs/003_控制流/final.md",
+      "title": "Java 为什么强制 if 必须带花括号？",
+      "summary": "Java强制花括号以编译期确定性对抗视觉欺骗，类比前端显式边界规范。",
+      "processed_at": "2026-04-21T22:52:09.845086",
+      "nodes_added": 16,
+      "edges_added": 20
+    },
+    {
+      "id": "005_继承与多态",
+      "path": "outputs/005_继承与多态/final.md",
+      "title": "Java 机制：设计动机与底层权衡",
+      "summary": "Java多态与前端契约思维的映射",
+      "processed_at": "2026-04-21T23:47:53.110826",
+      "nodes_added": 20,
+      "edges_added": 25
+    },
+    {
+      "id": "007_包机制",
+      "path": "outputs/007_包机制/final.md",
+      "title": "一、场景引入",
+      "summary": "Java包机制通过物理路径强制约束解决命名冲突与工程协作问题",
+      "processed_at": "2026-04-22T21:04:53.868006",
+      "nodes_added": 20,
+      "edges_added": 25
+    },
+    {
+      "id": "008_泛型基础",
+      "path": "outputs/008_泛型基础/final.md",
+      "title": "原文",
+      "summary": "Java泛型擦除机制、设计动机及与TS对比",
+      "processed_at": "2026-04-22T21:34:34.152198",
+      "nodes_added": 15,
+      "edges_added": 20
+    },
+    {
+      "id": "009_RestController",
+      "path": "outputs/009_RestController/final.md",
+      "title": "系列导航",
+      "summary": "Spring注解驱动开发与前端的认知映射及底层机制",
+      "processed_at": "2026-04-22T22:40:20.749153",
+      "nodes_added": 20,
+      "edges_added": 20
+    }
+  ]
+}

@@ -82,12 +82,12 @@ def generate_article(article: dict, kg_context: str = "",
             "入门": (
                 "【入门级强制要求 — 违反即重写】\n"
                 "读者 = 会写 Vue/React，但几乎没写过 Java 的前端工程师。\n"
-                "- 每个 Java 术语首次出现必须紧跟括号说明（1 句话，用前端工程师听得懂的话）\n"
-                "- 代码示例每段不超过 15 行，只用 Java 最基础语法，不依赖框架\n"
+                "- 每个 Java 术语首次出现必须紧跟括号说明\n"
+                "- 需要代码示例\n"
                 "- 禁止出现（入门）：vtable、invokevirtual、Liskov 替换原则、脆弱基类、\n"
                 "  协变/逆变、设计模式名词（未当场解释时）、@PostConstruct（未解释时）、\n"
                 "  Bean 生命周期（未解释时）、依赖注入容器（未解释时）\n"
-                "- 踩坑只讲 1 个，必须是初学者真实会犯的错\n"
+                "- 踩坑需要讲一下，必须是初学者真实会犯的错\n"
                 "- 文章目标：读完能写出一个可运行的最小示例"
             ),
             "进阶": (
@@ -304,6 +304,68 @@ def generate_article(article: dict, kg_context: str = "",
 # 主运行逻辑
 # ─────────────────────────────────────────────
 
+def show_last() -> None:
+    """打印最新生成的 final.md 内容，供 Hermes 直接读取。"""
+    candidates = sorted(ROOT.glob("*/final.md"))
+    if not candidates:
+        print("❌ 还没有生成过任何文章。")
+        return
+    latest = candidates[-1]
+    print(f"📄 {latest}\n")
+    print(latest.read_text(encoding="utf-8"))
+
+
+def show_outline() -> None:
+    """打印大纲摘要（id / 标题 / 状态）。"""
+    from outline import OutlineManager
+    outline = OutlineManager(OUTLINE_PATH, llm)
+    if not outline.articles:
+        print("❌ 大纲不存在，请先运行：python series_runner.py --outline")
+        return
+    for a in outline.articles:
+        status = a.get("status", "pending")
+        icon = {"done": "✅", "generating": "⏳", "error": "❌"}.get(status, "⬜")
+        print(f"{icon} [{a['id']:>3}] {a['title']}  ({a['category']} / {a['level']})")
+
+
+def run_by_id(article_id: int, force: bool = False) -> None:
+    """按 ID 生成（或强制重跑）指定文章。"""
+    from outline import OutlineManager
+    outline = OutlineManager(OUTLINE_PATH, llm)
+    if not outline.articles:
+        print("❌ 大纲不存在，请先运行：python series_runner.py --outline")
+        return
+
+    article = next((a for a in outline.articles if a["id"] == article_id), None)
+    if not article:
+        print(f"❌ 未找到 ID={article_id} 的文章")
+        return
+
+    if article.get("status") == "done" and not force:
+        print(f"⚠️  文章 {article_id} 已生成完毕（用 --force 强制重跑）")
+        return
+
+    print(f"\n{'='*60}")
+    print(f"🚀 [{article['id']}/{len(outline.articles)}] {article['title']}")
+    print(f"   分类: {article['category']}  难度: {article['level']}")
+    print(f"{'='*60}")
+
+    outline.mark_generating(article["id"])
+    try:
+        all_articles = outline.articles
+        idx = next((i for i, a in enumerate(all_articles) if a["id"] == article["id"]), None)
+        prev_title = all_articles[idx - 1]["title"] if idx and idx > 0 else ""
+        next_title = all_articles[idx + 1]["title"] if idx is not None and idx < len(all_articles) - 1 else ""
+
+        final_path = generate_article(article, "", prev_title, next_title, "")
+        print(f"  ✅ 已保存: {final_path}")
+        outline.mark_done(article["id"], final_path)
+    except Exception as e:
+        print(f"  ❌ 生成失败: {e}")
+        traceback.print_exc()
+        outline.mark_error(article["id"], str(e))
+
+
 def run_next(count: int = 1):
     from outline import OutlineManager
 
@@ -356,7 +418,11 @@ def run_next(count: int = 1):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="快速文章生成器（精简版）")
     parser.add_argument("--count", type=int, default=1, help="连续生成文章数（默认 1）")
+    parser.add_argument("--id", type=int, default=None, help="按 ID 生成指定文章")
+    parser.add_argument("--force", action="store_true", help="与 --id 配合，强制重跑已完成的文章")
     parser.add_argument("--progress", action="store_true", help="查看进度")
+    parser.add_argument("--show-last", action="store_true", help="打印最新生成的文章内容")
+    parser.add_argument("--show-outline", action="store_true", help="打印大纲摘要")
     parser.add_argument("--reset-errors", action="store_true", help="重置失败文章")
     args = parser.parse_args()
 
@@ -368,6 +434,12 @@ if __name__ == "__main__":
     elif args.reset_errors:
         outline.reset_errors()
         outline.print_progress()
+    elif args.show_last:
+        show_last()
+    elif args.show_outline:
+        show_outline()
+    elif args.id is not None:
+        run_by_id(args.id, force=args.force)
     else:
         if not outline.articles:
             print("❌ 大纲不存在，请先运行：python series_runner.py --outline")

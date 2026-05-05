@@ -4,9 +4,9 @@
     "generated_at": "2026-04-19T20:16:23.054597",
     "stats": {
       "total": 210,
-      "pending": 199,
+      "pending": 207,
       "generating": 1,
-      "done": 9,
+      "done": 1,
       "error": 1
     }
   },
@@ -19,7 +19,7 @@
       "frontend_analogy": "TS类型注解",
       "category": "基础语法",
       "level": "入门",
-      "status": "done",
+      "status": "generating",
       "article_path": "outputs/001_静态类型/final.md",
       "generated_at": "2026-04-19T20:20:07.170007",
       "error_msg": null
@@ -34,7 +34,7 @@
       "level": "入门",
       "status": "done",
       "article_path": "outputs/002_方法定义/final.md",
-      "generated_at": "2026-04-19T21:21:23.820805",
+      "generated_at": "2026-05-05T23:05:09.479938",
       "error_msg": null
     },
     {
@@ -45,7 +45,7 @@
       "frontend_analogy": "JS控制流",
       "category": "基础语法",
       "level": "入门",
-      "status": "done",
+      "status": "pending",
       "article_path": "outputs/003_控制流/final.md",
       "generated_at": "2026-04-21T22:51:43.272333",
       "error_msg": null
@@ -71,7 +71,7 @@
       "frontend_analogy": "TS接口",
       "category": "面向对象",
       "level": "进阶",
-      "status": "done",
+      "status": "pending",
       "article_path": "outputs/005_继承与多态/final.md",
       "generated_at": "2026-04-21T23:47:22.609101",
       "error_msg": null
@@ -84,7 +84,7 @@
       "frontend_analogy": "TS接口",
       "category": "基础语法",
       "level": "入门",
-      "status": "generating",
+      "status": "pending",
       "article_path": null,
       "generated_at": null,
       "error_msg": null
@@ -97,7 +97,7 @@
       "frontend_analogy": "JS模块",
       "category": "基础语法",
       "level": "入门",
-      "status": "done",
+      "status": "pending",
       "article_path": "outputs/007_包机制/final.md",
       "generated_at": "2026-04-22T21:04:23.834595",
       "error_msg": null
@@ -110,7 +110,7 @@
       "frontend_analogy": "TS泛型",
       "category": "基础语法",
       "level": "进阶",
-      "status": "done",
+      "status": "pending",
       "article_path": "outputs/008_泛型基础/final.md",
       "generated_at": "2026-04-22T21:34:08.290768",
       "error_msg": null
@@ -123,7 +123,7 @@
       "frontend_analogy": "Vue组件",
       "category": "Spring框架",
       "level": "入门",
-      "status": "done",
+      "status": "pending",
       "article_path": "outputs/009_RestController/final.md",
       "generated_at": "2026-04-22T22:39:52.739825",
       "error_msg": null
@@ -136,7 +136,7 @@
       "frontend_analogy": "React Context",
       "category": "Spring框架",
       "level": "入门",
-      "status": "done",
+      "status": "pending",
       "article_path": "outputs/010_Autowired/final.md",
       "generated_at": "2026-04-22T22:53:01.077582",
       "error_msg": null
@@ -149,7 +149,7 @@
       "frontend_analogy": "TS环境变量",
       "category": "Spring框架",
       "level": "进阶",
-      "status": "done",
+      "status": "pending",
       "article_path": "outputs/011_ConfigurationPropert/final.md",
       "generated_at": "2026-04-22T23:08:07.682652",
       "error_msg": null

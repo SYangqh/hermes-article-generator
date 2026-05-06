@@ -16,6 +16,7 @@ Article Workflow MCP Server
 然后 /reload 或重启 Hermes。
 """
 
+import json
 import subprocess
 import sys
 from pathlib import Path
@@ -24,6 +25,8 @@ from fastmcp import FastMCP
 
 ROOT = Path(__file__).parent.resolve()
 PYTHON = sys.executable
+MODEL_CONFIG = ROOT / "outputs" / "model_config.json"
+DEFAULT_MODEL = "qwen3.6-flash"
 
 mcp = FastMCP("article_runner")
 
@@ -91,6 +94,39 @@ def show_last() -> str:
 def reset_errors() -> str:
     """将所有失败（error）状态的文章重置为待生成。"""
     return _run(["--reset-errors"])
+
+
+@mcp.tool
+def get_model() -> str:
+    """【唯一正确做法】当用户问"当前模型是什么"/"用的什么模型"/"模型名"时，必须调用此工具。
+    直接返回 outputs/model_config.json 中记录的模型名称，不要猜测、不要推断。
+    """
+    if MODEL_CONFIG.exists():
+        try:
+            model = json.loads(MODEL_CONFIG.read_text(encoding="utf-8")).get("model", DEFAULT_MODEL)
+            return f"当前模型：{model}"
+        except Exception:
+            pass
+    return f"当前模型：{DEFAULT_MODEL}（默认，配置文件不存在）"
+
+
+@mcp.tool
+def set_model(model: str) -> str:
+    """切换文章生成使用的模型。下次生成文章时自动生效。
+    调用时机：用户说"切换模型"/"换模型"/"用xxx模型"/"set model xxx"。
+
+    常用模型：
+    - qwen3.6-flash
+    - qwen3.6-flash-2026-04-16
+    - qwen3.6-plus
+    - qwen-plus
+    """
+    MODEL_CONFIG.parent.mkdir(parents=True, exist_ok=True)
+    MODEL_CONFIG.write_text(
+        json.dumps({"model": model}, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    return f"✅ 模型已切换为：{model}（下次生成时生效）"
 
 
 if __name__ == "__main__":

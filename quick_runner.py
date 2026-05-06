@@ -11,6 +11,7 @@
 """
 
 import argparse
+import json
 import re as _re
 import traceback
 from functools import lru_cache
@@ -23,12 +24,34 @@ from langchain_openai import ChatOpenAI
 ROOT = Path("outputs")
 KB_DIR = ROOT / "knowledge_base"
 OUTLINE_PATH = ROOT / "outline.json"
+MODEL_CONFIG_PATH = ROOT / "model_config.json"
 
 ROOT.mkdir(exist_ok=True)
 KB_DIR.mkdir(exist_ok=True)
 
+DEFAULT_MODEL = "qwen3.6-flash"
+
+
+def _read_model() -> str:
+    """从 outputs/model_config.json 读取当前模型，文件不存在则返回默认值。"""
+    if MODEL_CONFIG_PATH.exists():
+        try:
+            return json.loads(MODEL_CONFIG_PATH.read_text(encoding="utf-8")).get("model", DEFAULT_MODEL)
+        except Exception:
+            pass
+    return DEFAULT_MODEL
+
+
+def _write_model(model: str) -> None:
+    """将模型名持久化到配置文件。"""
+    MODEL_CONFIG_PATH.write_text(
+        json.dumps({"model": model}, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+
+
 llm = ChatOpenAI(
-    model="qwen3.6-plus",
+    model=_read_model(),
     temperature=0.7,
     openai_api_key="sk-d172b4def726420ea22cfb8aa58ca10a",
     openai_api_base="https://dashscope.aliyuncs.com/compatible-mode/v1",
@@ -424,12 +447,19 @@ if __name__ == "__main__":
     parser.add_argument("--show-last", action="store_true", help="打印最新生成的文章内容")
     parser.add_argument("--show-outline", action="store_true", help="打印大纲摘要")
     parser.add_argument("--reset-errors", action="store_true", help="重置失败文章")
+    parser.add_argument("--set-model", type=str, default=None, help="切换模型（立即写入配置，下次生成生效）")
+    parser.add_argument("--get-model", action="store_true", help="查看当前使用的模型")
     args = parser.parse_args()
 
     from outline import OutlineManager
     outline = OutlineManager(OUTLINE_PATH, llm)
 
-    if args.progress:
+    if args.set_model:
+        _write_model(args.set_model)
+        print(f"✅ 模型已切换为：{args.set_model}")
+    elif args.get_model:
+        print(f"当前模型：{_read_model()}")
+    elif args.progress:
         outline.print_progress()
     elif args.reset_errors:
         outline.reset_errors()

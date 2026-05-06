@@ -4,10 +4,10 @@
     "generated_at": "2026-04-19T20:16:23.054597",
     "stats": {
       "total": 210,
-      "pending": 207,
+      "pending": 187,
       "generating": 1,
-      "done": 1,
-      "error": 1
+      "done": 22,
+      "error": 0
     }
   },
   "articles": [
@@ -19,7 +19,7 @@
       "frontend_analogy": "TS类型注解",
       "category": "基础语法",
       "level": "入门",
-      "status": "generating",
+      "status": "done",
       "article_path": "outputs/001_静态类型/final.md",
       "generated_at": "2026-04-19T20:20:07.170007",
       "error_msg": null
@@ -45,9 +45,9 @@
       "frontend_analogy": "JS控制流",
       "category": "基础语法",
       "level": "入门",
-      "status": "pending",
+      "status": "done",
       "article_path": "outputs/003_控制流/final.md",
-      "generated_at": "2026-04-21T22:51:43.272333",
+      "generated_at": "2026-05-06T20:07:20.969159",
       "error_msg": null
     },
     {
@@ -58,10 +58,10 @@
       "frontend_analogy": "Class语法",
       "category": "面向对象",
       "level": "入门",
-      "status": "error",
-      "article_path": null,
-      "generated_at": "2026-04-21T23:18:46.537206",
-      "error_msg": "At key '__root__': Can receive only one value per step. Use an Annotated key to handle multiple values.\nFor troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/INVALID_CONCU"
+      "status": "done",
+      "article_path": "outputs/004_类与对象/final.md",
+      "generated_at": "2026-05-06T22:08:10.932953",
+      "error_msg": null
     },
     {
       "id": 5,
@@ -71,9 +71,9 @@
       "frontend_analogy": "TS接口",
       "category": "面向对象",
       "level": "进阶",
-      "status": "pending",
+      "status": "done",
       "article_path": "outputs/005_继承与多态/final.md",
-      "generated_at": "2026-04-21T23:47:22.609101",
+      "generated_at": "2026-05-06T20:12:31.591554",
       "error_msg": null
     },
     {
@@ -84,9 +84,9 @@
       "frontend_analogy": "TS接口",
       "category": "基础语法",
       "level": "入门",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/006_接口定义/final.md",
+      "generated_at": "2026-05-06T20:15:15.388198",
       "error_msg": null
     },
     {
@@ -97,9 +97,9 @@
       "frontend_analogy": "JS模块",
       "category": "基础语法",
       "level": "入门",
-      "status": "pending",
+      "status": "done",
       "article_path": "outputs/007_包机制/final.md",
-      "generated_at": "2026-04-22T21:04:23.834595",
+      "generated_at": "2026-05-06T20:17:06.683214",
       "error_msg": null
     },
     {
@@ -110,9 +110,9 @@
       "frontend_analogy": "TS泛型",
       "category": "基础语法",
       "level": "进阶",
-      "status": "pending",
+      "status": "done",
       "article_path": "outputs/008_泛型基础/final.md",
-      "generated_at": "2026-04-22T21:34:08.290768",
+      "generated_at": "2026-05-06T20:20:13.195227",
       "error_msg": null
     },
     {
@@ -123,9 +123,9 @@
       "frontend_analogy": "Vue组件",
       "category": "Spring框架",
       "level": "入门",
-      "status": "pending",
+      "status": "done",
       "article_path": "outputs/009_RestController/final.md",
-      "generated_at": "2026-04-22T22:39:52.739825",
+      "generated_at": "2026-05-06T20:23:41.989179",
       "error_msg": null
     },
     {
@@ -136,9 +136,9 @@
       "frontend_analogy": "React Context",
       "category": "Spring框架",
       "level": "入门",
-      "status": "pending",
+      "status": "done",
       "article_path": "outputs/010_Autowired/final.md",
-      "generated_at": "2026-04-22T22:53:01.077582",
+      "generated_at": "2026-05-06T20:28:51.553490",
       "error_msg": null
     },
     {
@@ -149,9 +149,9 @@
       "frontend_analogy": "TS环境变量",
       "category": "Spring框架",
       "level": "进阶",
-      "status": "pending",
+      "status": "done",
       "article_path": "outputs/011_ConfigurationPropert/final.md",
-      "generated_at": "2026-04-22T23:08:07.682652",
+      "generated_at": "2026-05-06T20:32:34.398362",
       "error_msg": null
     },
     {
@@ -162,9 +162,9 @@
       "frontend_analogy": "Express中间件",
       "category": "Spring框架",
       "level": "进阶",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/012_Filter/final.md",
+      "generated_at": "2026-05-06T20:36:15.303777",
       "error_msg": null
     },
     {
@@ -175,9 +175,9 @@
       "frontend_analogy": "Axios拦截器",
       "category": "Spring框架",
       "level": "进阶",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/013_RestControllerAdvice/final.md",
+      "generated_at": "2026-05-06T20:39:00.023409",
       "error_msg": null
     },
     {
@@ -188,9 +188,9 @@
       "frontend_analogy": "React Query",
       "category": "Spring框架",
       "level": "入门",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/014_RestTemplate/final.md",
+      "generated_at": "2026-05-06T20:41:10.831717",
       "error_msg": null
     },
     {
@@ -201,9 +201,9 @@
       "frontend_analogy": "Vue Router",
       "category": "Spring框架",
       "level": "入门",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/015_WebMvcConfigurer/final.md",
+      "generated_at": "2026-05-06T20:44:14.825975",
       "error_msg": null
     },
     {
@@ -214,9 +214,9 @@
       "frontend_analogy": "TS泛型校验",
       "category": "Spring框架",
       "level": "进阶",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/016_Validation/final.md",
+      "generated_at": "2026-05-06T20:47:13.033684",
       "error_msg": null
     },
     {
@@ -227,9 +227,9 @@
       "frontend_analogy": "Pinia Store",
       "category": "Spring框架",
       "level": "进阶",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/017_Service层/final.md",
+      "generated_at": "2026-05-06T20:49:23.668421",
       "error_msg": null
     },
     {
@@ -240,9 +240,9 @@
       "frontend_analogy": "Webpack Tree Shaking",
       "category": "Spring框架",
       "level": "高级",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/018_Conditional/final.md",
+      "generated_at": "2026-05-06T20:58:29.948118",
       "error_msg": null
     },
     {
@@ -253,9 +253,9 @@
       "frontend_analogy": "Axios拦截器",
       "category": "Spring框架",
       "level": "入门",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/019_Filter/final.md",
+      "generated_at": "2026-05-06T21:01:25.705955",
       "error_msg": null
     },
     {
@@ -266,9 +266,9 @@
       "frontend_analogy": "TS依赖注入",
       "category": "Spring框架",
       "level": "入门",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/020_@Autowired/final.md",
+      "generated_at": "2026-05-06T21:58:29.498776",
       "error_msg": null
     },
     {
@@ -279,9 +279,9 @@
       "frontend_analogy": "Vite环境变量",
       "category": "Spring框架",
       "level": "入门",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/021_Profile/final.md",
+      "generated_at": "2026-05-06T22:03:49.692656",
       "error_msg": null
     },
     {
@@ -292,9 +292,9 @@
       "frontend_analogy": "React ErrorBoundary",
       "category": "Spring框架",
       "level": "进阶",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/022_@ControllerAdvice/final.md",
+      "generated_at": "2026-05-06T22:17:38.273986",
       "error_msg": null
     },
     {
@@ -305,7 +305,7 @@
       "frontend_analogy": "Vue Router守卫",
       "category": "Spring框架",
       "level": "进阶",
-      "status": "pending",
+      "status": "generating",
       "article_path": null,
       "generated_at": null,
       "error_msg": null

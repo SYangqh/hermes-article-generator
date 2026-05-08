@@ -53,8 +53,8 @@ def _write_model(model: str) -> None:
 llm = ChatOpenAI(
     model=_read_model(),
     temperature=0.7,
-    openai_api_key="sk-d172b4def726420ea22cfb8aa58ca10a",
-    openai_api_base="https://dashscope.aliyuncs.com/compatible-mode/v1",
+    openai_api_key="sk-d063a045c88e444bbeaa805dc9b0e508",
+    openai_api_base="https://api.deepseek.com",
 )
 
 

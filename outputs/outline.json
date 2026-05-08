@@ -4,10 +4,10 @@
     "generated_at": "2026-04-19T20:16:23.054597",
     "stats": {
       "total": 210,
-      "pending": 187,
+      "pending": 158,
       "generating": 1,
-      "done": 22,
-      "error": 0
+      "done": 50,
+      "error": 1
     }
   },
   "articles": [
@@ -305,9 +305,9 @@
       "frontend_analogy": "Vue Router守卫",
       "category": "Spring框架",
       "level": "进阶",
-      "status": "generating",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/023_HandlerInterceptor/final.md",
+      "generated_at": "2026-05-06T22:54:34.329544",
       "error_msg": null
     },
     {
@@ -318,9 +318,9 @@
       "frontend_analogy": "React Router",
       "category": "Spring框架",
       "level": "入门",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/024_@RestController/final.md",
+      "generated_at": "2026-05-06T22:57:42.559552",
       "error_msg": null
     },
     {
@@ -331,9 +331,9 @@
       "frontend_analogy": "Vue Composition API",
       "category": "Spring框架",
       "level": "入门",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/025_@Configuration/final.md",
+      "generated_at": "2026-05-06T23:00:47.699669",
       "error_msg": null
     },
     {
@@ -344,7 +344,7 @@
       "frontend_analogy": "TS interface",
       "category": "Spring框架",
       "level": "入门",
-      "status": "pending",
+      "status": "generating",
       "article_path": null,
       "generated_at": null,
       "error_msg": null
@@ -357,9 +357,9 @@
       "frontend_analogy": "Axios 拦截器",
       "category": "Spring框架",
       "level": "进阶",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/027_Filter_vs_Intercepto/final.md",
+      "generated_at": "2026-05-06T23:12:16.598616",
       "error_msg": null
     },
     {
@@ -370,9 +370,9 @@
       "frontend_analogy": "Vite HMR",
       "category": "Spring框架",
       "level": "入门",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/028_DevTools/final.md",
+      "generated_at": "2026-05-06T23:15:38.476564",
       "error_msg": null
     },
     {
@@ -383,9 +383,9 @@
       "frontend_analogy": "Axios拦截器",
       "category": "Spring框架",
       "level": "入门",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/029_@ControllerAdvice/final.md",
+      "generated_at": "2026-05-06T23:19:19.564116",
       "error_msg": null
     },
     {
@@ -396,9 +396,9 @@
       "frontend_analogy": "Vue依赖注入",
       "category": "Spring框架",
       "level": "入门",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/030_@Autowired/final.md",
+      "generated_at": "2026-05-06T23:29:00.023605",
       "error_msg": null
     },
     {
@@ -409,9 +409,9 @@
       "frontend_analogy": "TS类声明",
       "category": "面向对象",
       "level": "入门",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/031_Java类定义/final.md",
+      "generated_at": "2026-05-06T23:32:44.571142",
       "error_msg": null
     },
     {
@@ -422,9 +422,9 @@
       "frontend_analogy": "TS接口",
       "category": "面向对象",
       "level": "入门",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/032_Java接口/final.md",
+      "generated_at": "2026-05-06T23:39:05.478104",
       "error_msg": null
     },
     {
@@ -435,9 +435,9 @@
       "frontend_analogy": "TS继承",
       "category": "面向对象",
       "level": "进阶",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/033_继承/final.md",
+      "generated_at": "2026-05-06T23:43:14.978182",
       "error_msg": null
     },
     {
@@ -448,9 +448,9 @@
       "frontend_analogy": "TS多态",
       "category": "面向对象",
       "level": "进阶",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/034_多态/final.md",
+      "generated_at": "2026-05-07T07:25:00.779990",
       "error_msg": null
     },
     {
@@ -461,9 +461,9 @@
       "frontend_analogy": "TS泛型",
       "category": "面向对象",
       "level": "高级",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/035_泛型/final.md",
+      "generated_at": "2026-05-07T07:48:12.459756",
       "error_msg": null
     },
     {
@@ -474,10 +474,10 @@
       "frontend_analogy": "TS接口实现",
       "category": "面向对象",
       "level": "入门",
-      "status": "pending",
+      "status": "error",
       "article_path": null,
-      "generated_at": null,
-      "error_msg": null
+      "generated_at": "2026-05-07T22:12:27.402757",
+      "error_msg": "Error code: 404"
     },
     {
       "id": 37,
@@ -487,9 +487,9 @@
       "frontend_analogy": "Vue组件继承",
       "category": "面向对象",
       "level": "入门",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/037_继承重写/final.md",
+      "generated_at": "2026-05-07T22:20:35.157465",
       "error_msg": null
     },
     {
@@ -500,9 +500,9 @@
       "frontend_analogy": "React高阶组件",
       "category": "面向对象",
       "level": "进阶",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/038_组合优于继承/final.md",
+      "generated_at": "2026-05-07T22:31:18.271905",
       "error_msg": null
     },
     {
@@ -513,9 +513,9 @@
       "frontend_analogy": "TS抽象类",
       "category": "面向对象",
       "level": "进阶",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/039_抽象类/final.md",
+      "generated_at": "2026-05-07T22:43:12.306744",
       "error_msg": null
     },
     {
@@ -526,9 +526,9 @@
       "frontend_analogy": "TS泛型类",
       "category": "面向对象",
       "level": "高级",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/040_泛型类/final.md",
+      "generated_at": "2026-05-07T22:50:59.914310",
       "error_msg": null
     },
     {
@@ -539,9 +539,9 @@
       "frontend_analogy": "TS类声明",
       "category": "面向对象",
       "level": "入门",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/041_Java类定义/final.md",
+      "generated_at": "2026-05-07T22:56:52.943589",
       "error_msg": null
     },
     {
@@ -552,9 +552,9 @@
       "frontend_analogy": "TS接口实现",
       "category": "面向对象",
       "level": "入门",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/042_接口多态/final.md",
+      "generated_at": "2026-05-07T23:03:39.305144",
       "error_msg": null
     },
     {
@@ -565,9 +565,9 @@
       "frontend_analogy": "Vue组件插槽",
       "category": "面向对象",
       "level": "进阶",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/043_方法重载/final.md",
+      "generated_at": "2026-05-07T23:10:01.204056",
       "error_msg": null
     },
     {
@@ -578,9 +578,9 @@
       "frontend_analogy": "React高阶组件",
       "category": "面向对象",
       "level": "进阶",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/044_装饰器模式/final.md",
+      "generated_at": "2026-05-07T23:18:18.273470",
       "error_msg": null
     },
     {
@@ -591,9 +591,9 @@
       "frontend_analogy": "TS泛型函数",
       "category": "面向对象",
       "level": "高级",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/045_泛型方法/final.md",
+      "generated_at": "2026-05-07T23:27:59.463421",
       "error_msg": null
     },
     {
@@ -604,9 +604,9 @@
       "frontend_analogy": "箭头函数",
       "category": "函数式编程",
       "level": "入门",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/046_Lambda表达式/final.md",
+      "generated_at": "2026-05-07T23:32:12.097853",
       "error_msg": null
     },
     {
@@ -617,9 +617,9 @@
       "frontend_analogy": "Array.map",
       "category": "函数式编程",
       "level": "入门",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/047_Stream.map/final.md",
+      "generated_at": "2026-05-07T23:38:00.121592",
       "error_msg": null
     },
     {
@@ -630,9 +630,9 @@
       "frontend_analogy": "Array.filter",
       "category": "函数式编程",
       "level": "入门",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/048_Stream.filter/final.md",
+      "generated_at": "2026-05-07T23:43:39.446220",
       "error_msg": null
     },
     {
@@ -643,9 +643,9 @@
       "frontend_analogy": "Optional链",
       "category": "函数式编程",
       "level": "进阶",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/049_Optional/final.md",
+      "generated_at": "2026-05-07T23:51:44.460955",
       "error_msg": null
     },
     {
@@ -656,9 +656,9 @@
       "frontend_analogy": "方法引用",
       "category": "函数式编程",
       "level": "进阶",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/050_方法引用/final.md",
+      "generated_at": "2026-05-07T23:59:45.696028",
       "error_msg": null
     },
     {
@@ -669,9 +669,9 @@
       "frontend_analogy": "Array.reduce",
       "category": "函数式编程",
       "level": "入门",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/051_Stream.reduce/final.md",
+      "generated_at": "2026-05-08T00:05:30.301953",
       "error_msg": null
     },
     {
@@ -682,9 +682,9 @@
       "frontend_analogy": "Array.find",
       "category": "函数式编程",
       "level": "入门",
-      "status": "pending",
-      "article_path": null,
-      "generated_at": null,
+      "status": "done",
+      "article_path": "outputs/052_Stream.findFirst/final.md",
+      "generated_at": "2026-05-08T00:12:15.232355",
       "error_msg": null
     },
     {
